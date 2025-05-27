@@ -4,47 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xavier Lagrange | Executive Education</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
       padding: 0;
     }
     body {
-      background-color: #f9fafb;
-      color: #1f2937;
+      background-color: #0d1117;
+      color: #e5e5e5;
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #0f172a, #1e3a8a);
-      color: white;
+      background: linear-gradient(90deg, #0ff, #00f, #0ff);
       padding: 2rem;
       text-align: center;
+      color: #0f0;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       margin-bottom: 1rem;
       object-fit: cover;
-      border: 4px solid white;
+      border: 4px solid #0ff;
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      background-color: #1e3a8a;
+      background-color: #1a1f2b;
       padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,255,255,0.2);
     }
     nav a {
-      color: white;
+      color: #0ff;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #0f0;
     }
     .container {
       max-width: 1000px;
@@ -63,16 +66,17 @@
       to { opacity: 1; }
     }
     .card {
-      background-color: white;
+      background-color: #1a1f2b;
       border-radius: 0.75rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 15px rgba(0,255,255,0.15);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      border: 1px solid #0ff2;
     }
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
-      color: #1e3a8a;
+      color: #0ff;
     }
     form {
       display: flex;
@@ -82,29 +86,40 @@
       margin-bottom: 1rem;
       padding: 0.75rem;
       border-radius: 0.5rem;
-      border: 1px solid #d1d5db;
+      border: 1px solid #0ff2;
+      background-color: #0f172a;
+      color: #e5e5e5;
     }
     form button {
-      background-color: #1e3a8a;
-      color: white;
+      background-color: #00f;
+      color: #0ff;
       padding: 0.75rem;
       border: none;
       border-radius: 0.5rem;
       font-weight: 600;
       cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #0f0;
+      color: #000;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: #0f172a;
-      color: white;
+      background-color: #000;
+      color: #0ff;
       margin-top: 2rem;
+      border-top: 1px solid #0ff2;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/120" alt="Xavier Lagrange">
+    <img src="./1665062249907 copie.jpg" alt="Xavier Lagrange">
     <h1>Xavier Lagrange</h1>
     <p>Expert Executive Education | Développement B2B | Pilotage d’activités</p>
   </header>
@@ -121,7 +136,7 @@
     <section id="accueil" class="active">
       <div class="card">
         <h2>Résumé</h2>
-        <p>Fort d’une expérience de plus de 20 ans dans l’éducation et la formation professionnelle, je suis motivé à relever de nouveaux défis dans le pilotage d’activité et le développement BtoB, en mobilisant mon réseau, mon expertise managériale et ma connaissance du secteur.</p>
+        <p>Fort d’une expérience de plus de 20 ans dans le domaine de l’éducation et de la formation professionnelle, je souhaite désormais relever de nouveaux challenges, notamment dans le pilotage d’activité et le développement BtoB, en mobilisant mon réseau, mes compétences managériales et mon expertise du secteur.</p>
       </div>
       <div class="card">
         <h2>Compétences</h2>
@@ -135,7 +150,7 @@
       </div>
       <div class="card">
         <h2>Coordonnées</h2>
-        <p>Âge : 45 ans</p>
+        <p>45 ans | Marié | Permis B</p>
         <p>Téléphone : 06 34 05 94 00</p>
         <p>Email : <a href="mailto:xavlagrange@gmail.com">xavlagrange@gmail.com</a></p>
         <p>Adresse : 5 rue de Nantes, 75019 Paris</p>
@@ -146,11 +161,11 @@
       <div class="card">
         <h2>Expériences professionnelles</h2>
         <ul>
-          <li><strong>Responsable Executive Education – EFREI Paris (2021–présent)</strong></li>
-          <li><strong>Responsable Commercial – HEJ (2021)</strong></li>
-          <li><strong>Head of Open Enrolment – HEC (2017–2021)</strong></li>
-          <li><strong>Business Developer – HEC (2015–2017)</strong></li>
-          <li><strong>Program Manager – HEC (2011–2015)</strong></li>
+          <li><strong>Responsable Executive Education</strong> – EFREI Paris (2021–présent)<br>SMQ, CRM Salesforce/Hubspot, 38 programmes créés, catalogue web, développement commercial</li>
+          <li><strong>Responsable Commercial</strong> – HEJ (mai–août 2021)<br>Management, stratégie commerciale, audit ISO, KAM</li>
+          <li><strong>Head of Open Enrolment</strong> – HEC (2017–2021)<br>P&L, stratégie B2B, fidélisation, offres sur mesure</li>
+          <li><strong>Business Developer</strong> – HEC (2015–2017)<br>Commercialisation, stratégie KAM, prospection</li>
+          <li><strong>Program Manager</strong> – HEC (2011–2015)<br>MOA/AMOA, plateforme e-learning, CRM Dynamics</li>
         </ul>
       </div>
     </section>
@@ -160,12 +175,14 @@
         <h2>Formations</h2>
         <h3>Formation continue</h3>
         <ul>
-          <li>Auditeur ISO, Coaching, Management, RNCP – HEC</li>
+          <li>Auditeur ISO, Influence transversale (HEC)</li>
+          <li>Coach professionnel, Manager Entraineur (HEC)</li>
+          <li>Grands Comptes, RNCP/RS (HEC)</li>
         </ul>
         <h3>Formation initiale</h3>
         <ul>
           <li>BTS Assistant de gestion PME/PMI</li>
-          <li>Baccalauréat STT option comptabilité/gestion</li>
+          <li>Baccalauréat STT (comptabilité/gestion)</li>
         </ul>
       </div>
     </section>
@@ -174,10 +191,12 @@
       <div class="card">
         <h2>Outils maîtrisés</h2>
         <ul>
-          <li>Suite Office, Access, Acrobat Pro, Ciel, Sage, SAP</li>
-          <li>Plateformes e-learning : DOKEOS, LMS 360</li>
+          <li>Pack Office, Access, Acrobat Pro</li>
+          <li>Ciel (compta, gestion commerciale), Sage</li>
+          <li>SAP (SD, HR, BO)</li>
+          <li>Dokeos, LMS 360 Learning</li>
           <li>CRM : Microsoft Dynamics, Salesforce, HubSpot</li>
-          <li>Réseaux sociaux & Social Selling</li>
+          <li>Maîtrise des Réseaux Sociaux (social selling)</li>
         </ul>
       </div>
     </section>
