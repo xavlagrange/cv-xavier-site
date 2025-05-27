@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavier Lagrange | Executive Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #0f172a, #1e3a8a);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1e3a8a;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .card {
+      background-color: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #1e3a8a;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+    }
+    form button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f172a;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/120" alt="Xavier Lagrange">
+    <h1>Xavier Lagrange</h1>
+    <p>Expert Executive Education | Développement B2B | Pilotage d’activités</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showTab('accueil')">Accueil</a>
+    <a href="#" onclick="showTab('experiences')">Expériences</a>
+    <a href="#" onclick="showTab('formations')">Formations</a>
+    <a href="#" onclick="showTab('outils')">Outils</a>
+    <a href="#" onclick="showTab('contact')">Me contacter</a>
+  </nav>
+
+  <main class="container">
+    <section id="accueil" class="active">
+      <div class="card">
+        <h2>Résumé</h2>
+        <p>Fort d’une expérience de plus de 20 ans dans l’éducation et la formation professionnelle, je suis motivé à relever de nouveaux défis dans le pilotage d’activité et le développement BtoB, en mobilisant mon réseau, mon expertise managériale et ma connaissance du secteur.</p>
+      </div>
+      <div class="card">
+        <h2>Compétences</h2>
+        <ul>
+          <li>Agilité dans le changement</li>
+          <li>Accompagnement managérial</li>
+          <li>Sens de l'initiative</li>
+          <li>Intelligence relationnelle</li>
+          <li>Sens de l'organisation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Coordonnées</h2>
+        <p>Âge : 45 ans</p>
+        <p>Téléphone : 06 34 05 94 00</p>
+        <p>Email : <a href="mailto:xavlagrange@gmail.com">xavlagrange@gmail.com</a></p>
+        <p>Adresse : 5 rue de Nantes, 75019 Paris</p>
+      </div>
+    </section>
+
+    <section id="experiences">
+      <div class="card">
+        <h2>Expériences professionnelles</h2>
+        <ul>
+          <li><strong>Responsable Executive Education – EFREI Paris (2021–présent)</strong></li>
+          <li><strong>Responsable Commercial – HEJ (2021)</strong></li>
+          <li><strong>Head of Open Enrolment – HEC (2017–2021)</strong></li>
+          <li><strong>Business Developer – HEC (2015–2017)</strong></li>
+          <li><strong>Program Manager – HEC (2011–2015)</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="formations">
+      <div class="card">
+        <h2>Formations</h2>
+        <h3>Formation continue</h3>
+        <ul>
+          <li>Auditeur ISO, Coaching, Management, RNCP – HEC</li>
+        </ul>
+        <h3>Formation initiale</h3>
+        <ul>
+          <li>BTS Assistant de gestion PME/PMI</li>
+          <li>Baccalauréat STT option comptabilité/gestion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="outils">
+      <div class="card">
+        <h2>Outils maîtrisés</h2>
+        <ul>
+          <li>Suite Office, Access, Acrobat Pro, Ciel, Sage, SAP</li>
+          <li>Plateformes e-learning : DOKEOS, LMS 360</li>
+          <li>CRM : Microsoft Dynamics, Salesforce, HubSpot</li>
+          <li>Réseaux sociaux & Social Selling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h2>Me contacter</h2>
+        <form>
+          <input type="text" placeholder="Nom" required>
+          <input type="text" placeholder="Prénom" required>
+          <input type="text" placeholder="Fonction">
+          <input type="text" placeholder="Entreprise">
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Téléphone">
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Xavier Lagrange | Site personnel
+  </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
