@@ -18,27 +18,18 @@
       line-height: 1.6;
     }
     header {
-      background: url('photo-header.jpg') no-repeat center center / cover;
-      height: 300px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      text-align: center;
-    }
-    header h1, header p {
-      margin: 0;
-      padding: 0.5rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 100%;
-    }
-    header h1 {
-      font-size: 2rem;
+      background: linear-gradient(90deg, #1b1f40, #1a2a6c);
+      padding: 2rem;
       color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
     }
-    header p {
-      font-size: 1rem;
-      color: #cccccc;
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0;
     }
     nav {
       display: flex;
@@ -124,10 +115,14 @@
     ul li {
       margin-bottom: 0.5rem;
     }
+    a {
+      color: #66ccff;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="photo-xavier.jpg" alt="Xavier Lagrange">
     <div>
       <h1>Xavier Lagrange</h1>
       <p>Expert Executive Education | Développement B2B | Pilotage d’activités</p>
@@ -146,15 +141,21 @@
     <section id="accueil" class="active">
       <div class="card">
         <h2>Résumé</h2>
-        <!-- contenu inchangé -->
+        <p>Fort d’une expérience de plus de 20 ans dans l’éducation et la formation professionnelle, je suis motivé à relever de nouveaux défis dans le pilotage d’activité et le développement BtoB, en mobilisant mon réseau, mon expertise managériale et ma connaissance du secteur.</p>
       </div>
       <div class="card">
         <h2>Compétences</h2>
-        <!-- contenu inchangé -->
+        <ul>
+          <li>Agilité dans le changement</li>
+          <li>Accompagnement managérial</li>
+          <li>Sens de l'initiative</li>
+          <li>Intelligence relationnelle</li>
+          <li>Sens de l'organisation</li>
+        </ul>
       </div>
       <div class="card">
         <h2>Coordonnées</h2>
-        <p>Permis B</p>
+        <p>Âge : 45 ans | Marié | Permis B</p>
         <p>Téléphone : 06 34 05 94 00</p>
         <p>Email : <a href="mailto:xavlagrange@gmail.com">xavlagrange@gmail.com</a></p>
         <p>Adresse : 5 rue de Nantes, 75019 Paris</p>
@@ -164,8 +165,76 @@
       </div>
     </section>
 
-    <!-- Les autres sections restent inchangées -->
+    <section id="experiences">
+      <div class="card">
+        <h2>Responsable Executive Education – EFREI Paris (août 2021 – aujourd’hui)</h2>
+        <ul>
+          <li>Création du SMQ, process, dashboards</li>
+          <li>Intégration CRM Salesforce & Hubspot</li>
+          <li>Élaboration de l’offre continue (38 programmes)</li>
+          <li>Création site web + catalogue</li>
+          <li>Commercialisation et partenariats</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Responsable Commercial – Haute École de Joaillerie (mai – août 2021)</h2>
+        <ul>
+          <li>Management de 3 chargés de clientèle</li>
+          <li>Stratégie commerciale, offre, audit ISO 9001</li>
+          <li>Développement des partenariats</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>HEC Executive Education (2011 – 2021)</h2>
+        <ul>
+          <li><strong>Head of Open Programs</strong> (2017 – 2021) : direction de 6 personnes, gestion des P&L, offre BtoB</li>
+          <li><strong>Business Developer & Project Officer</strong> (2015 – 2017) : stratégie KAM, nouveaux marchés</li>
+          <li><strong>Program Manager</strong> (2011 – 2015) : digitalisation, CRM Dynamics, gestion des formations</li>
+        </ul>
+      </div>
+    </section>
 
+    <section id="formations">
+      <div class="card">
+        <h2>Formation continue</h2>
+        <ul>
+          <li>RNCP / RS (Centre Inffo)</li>
+          <li>Grands Comptes, Coaching, Négociation, Auditeur ISO (HEC)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Formation initiale</h2>
+        <ul>
+          <li>BTS Assistant de gestion PME/PMI</li>
+          <li>Baccalauréat STT option comptabilité/gestion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="outils">
+      <div class="card">
+        <h2>Outils maîtrisés</h2>
+        <ul>
+          <li>Office, Access, Acrobat Pro, Ciel, Sage</li>
+          <li>SAP (SD, HR, BO)</li>
+          <li>LMS Dokeos, 360Learning</li>
+          <li>CRM : Dynamics, Salesforce, Hubspot</li>
+          <li>Réseaux sociaux & social selling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h2>Me contacter</h2>
+        <form>
+          <input type="text" placeholder="Votre nom" required>
+          <input type="email" placeholder="Votre email" required>
+          <textarea rows="5" placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
