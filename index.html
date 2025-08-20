@@ -1,69 +1,306 @@
 <!DOCTYPE html>
-footer {
-font-size: 0.8rem;
-}
-}
-@media (max-width: 480px) {
-header h1 {
-font-size: 1rem;
-}
-nav a {
-font-size: 0.85rem;
-}
-form input, form textarea {
-font-size: 0.85rem;
-}
-footer {
-font-size: 0.75rem;
-}
-}
-</style>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavier Lagrange | Executive Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0a0d1c;
+      color: #e6e6f0;
+      line-height: 1.6;
+    }
+    header {
+      background-image: url('photo-xavier.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem;
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+    }
+    header div {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 0.8rem;
+      margin: 0.2rem 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #121630;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,255,0.3);
+    }
+    nav a {
+      color: #66ccff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      color: #00ccff;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      display: none;
+    }
+    section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card {
+      background-color: #1b1f35;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 15px rgba(0,0,255,0.15);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #1a2a6c;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #66ccff;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #1a2a6c;
+      background-color: #101426;
+      color: #e6e6f0;
+    }
+    form button {
+      background-color: #1a2a6c;
+      color: #ffffff;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #66ccff;
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0a0d1c;
+      color: #66ccff;
+      margin-top: 2rem;
+      border-top: 1px solid #1a2a6c;
+      font-size: 0.9rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #66ccff;
+    }
+  </style>
 </head>
 <body>
-<header>
-<div>
-<h1>Xavier Lagrange</h1>
-<p>Expert Executive Education | Développement B2B | Pilotage d’activités</p>
-</div>
-</header>
+  <header>
+    <div>
+      <h1>Xavier Lagrange</h1>
+      <p>Expert Executive Education | Développement B2B | Pilotage d’activités</p>
+    </div>
+  </header>
 
-<nav>
-<a href="#" onclick="showTab('accueil')">Accueil</a>
-<a href="#" onclick="showTab('experiences')">Expériences</a>
-<a href="#" onclick="showTab('formations')">Formations</a>
-<a href="#" onclick="showTab('outils')">Outils</a>
-<a href="#" onclick="showTab('contact')">Me contacter</a>
-</nav>
+  <nav>
+    <a href="#" onclick="showTab('accueil')">Accueil</a>
+    <a href="#" onclick="showTab('experiences')">Expériences</a>
+    <a href="#" onclick="showTab('formations')">Formations</a>
+    <a href="#" onclick="showTab('outils')">Outils</a>
+    <a href="#" onclick="showTab('contact')">Me contacter</a>
+  </nav>
 
-<main class="container">
-<!-- autres sections inchangées -->
+  <main class="container">
+    <section id="accueil" class="active">
+      <div class="card">
+        <h2>Résumé</h2>
+        <p>Fort d’une expérience de plus de 20 ans dans la formation professionnelle, je suis motivé à relever de nouveaux défis dans le pilotage d’activité et le développement BtoB, en mobilisant mon réseau, mon expertise managériale et ma connaissance du secteur de l'éducation. J'ai à coeur d'accompagner les experts désireux d'acquérir de nouvelles connaissances ou désireux de changer de métier. J'aide les organisations dans le plan de développement des compétences de leurs collaborateurs et leurs projets de transformations structurants. Passionné d' #ExecEd #DigitalTransformation #Innovation #Strategy #Branding #Curation #Socialselling & #Marketing, j'ai également un goût prononcé pour le business development et les partenariats et une vraie appétence pour le digital.</p>
+      </div>
+      <div class="card">
+        <h2>Compétences</h2>
+        <ul>
+          <li>Agilité dans le changement</li>
+          <li>Accompagnement managérial</li>
+          <li>Sens de l'initiative</li>
+          <li>Intelligence relationnelle</li>
+          <li>Sens de l'organisation</li>
+          <li>Esprit d’analyse</li>
+          <li>Synthèse d’informations complexes</li>
+          <li>Esprit critique</li>
+          <li>Créativité / innovation</li>
+          <li>Gestion de projet</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Coordonnées</h2>
+        <p>Permis B</p>
+        <p>Téléphone : 06 34 05 94 00</p>
+        <p>Email : <a href="mailto:xavlagrange@gmail.com">xavlagrange@gmail.com</a></p>
+        <p>Adresse : 5 rue de Nantes, 75019 Paris</p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/lagrangexavier/" target="_blank">linkedin.com/in/lagrangexavier</a></p>
+        <p>X : <a href="https://x.com/LAGRANGE_Xavier" target="_blank">x.com/LAGRANGE_Xavier</a></p>
+        <p>YouTube : <a href="https://www.youtube.com/channel/UCTy6u1CMd-d_trtSAN1Lccw" target="_blank">Chaîne YouTube</a></p>
+      </div>
+    </section>
 
-<section id="contact">
-<div class="card">
-<h2>Me contacter</h2>
-<form action="mailto:xav.lagrange@gmail.com" method="POST" enctype="text/plain">
-<input type="text" name="Nom" placeholder="Votre nom" required>
-<input type="email" name="Email" placeholder="Votre email" required>
-<textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
-<button type="submit">Envoyer</button>
-</form>
-</div>
-</section>
-</main>
+    <section id="experiences">
+      <div class="card">
+        <h2>Responsable Executive Education – EFREI Paris (août 2021 – aujourd’hui)</h2>
+        <ul>
+          <li>Élaboration et création d’une offre de formation continue</li>
+          <li>Création du système de management de la qualité (SMQ)</li>
+          <li>Conception de process, processus et dashboards</li>
+          <li>Intégration des CRM Salesforce et Hubspot</li>
+          <li>Création d’un site web et catalogue de 38 programmes</li>
+          <li>Développement commercial et partenariats</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Responsable Commercial – Haute École de Joaillerie (mai – août 2021)</h2>
+        <ul>
+          <li>Management d’une équipe de 3 personnes</li>
+          <li>Stratégie de développement commercial sur toute l’offre</li>
+          <li>Réorganisation des programmes et audit ISO 9001</li>
+          <li>Développement de partenariats et gestion grands comptes</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Head of Open Enrolment Programs – HEC Executive Education (2017 – 2021)</h2>
+        <ul>
+          <li>Directeur d’une équipe pluridisciplinaire de 6 personnes (Business Development, Sales, Delivery & Loyalty)</li>
+          <li>Responsable des P&L et de la gestion globale de l’ensemble des programmes certifiants</li>
+          <li>Elaboration de la stratégie, structuration du plan de développement (opportunités de croissance intra et inter, fidélisation des Grands Comptes) Conception et déploiement d'une offre BtoB</li>
+          <li>Collaboration étroite avec les Directeurs académiques : identification des tendances dans la création de l’offre de formations</li>
+          <li>Représentation de l’Institution lors de l'ensemble des événements de prospection de clients et lors de workshops d’animation du réseau</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Business Developer & Project Officer – HEC Executive Education (2015 – 2017)</h2>
+        <ul>
+          <li>Management de 4 personnes</li>
+          <li>Développement commercial multi-gammes de formations</li>
+          <li>Élaboration et déploiement de la stratégie commerciale KAM (up & crossselling, identification de nouveaux marchés et prospection de nouveaux clients)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Project Officer & Program Manager – HEC Executive Education (2011 – 2015)</h2>
+        <ul>
+          <li>Gestion de programmes et d’une équipe de 2 personnes</li>
+          <li>MOA/AMOA sur projets digitaux (plateforme, paiement en ligne)</li>
+          <li>Implémentation du CRM Microsoft Dynamics</li>
+        </ul>
+      </div>
+    </section>
 
-<footer>
-&copy; 2025 Xavier Lagrange | Site personnel
-</footer>
+    <section id="formations">
+      <div class="card">
+        <h2>Formation continue</h2>
+        <ul>
+          <li>Enregistrer une formation au RNCP/RS (Centre Inffo)</li>
+          <li>Accélérer sa croissance avec les Grands Comptes (HEC)</li>
+          <li>Améliorer ses performances de Manager Entraîneur (HEC)</li>
+          <li>Compétences coach : Coaching professionnel (HEC)</li>
+          <li>Négociation et argumentation (HEC)</li>
+          <li>Influence transversale (HEC)</li>
+          <li>Auditeur ISO</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Formation initiale</h2>
+        <ul>
+          <li>BTS Assistant de gestion PME/PMI</li>
+          <li>Baccalauréat STT option comptabilité/gestion</li>
+        </ul>
+      </div>
+    </section>
 
-<script>
-function showTab(id) {
-document.querySelectorAll('section').forEach(sec => {
-sec.classList.remove('active');
-});
-const activeSection = document.getElementById(id);
-activeSection.classList.add('active');
-}
-</script>
+    <section id="outils">
+      <div class="card">
+        <h2>Outils maîtrisés</h2>
+        <ul>
+          <li>Pack Office</li>
+          <li>Access</li>
+          <li>Acrobat Pro</li>
+          <li>Ciel</li>
+          <li>Sage</li>
+          <li>SAP(SD, HR, BO)</li>
+          <li>LMS : Dokeos, 360Learning</li>
+          <li>CRM : Dynamics, Salesforce, Hubspot</li>
+          <li>Réseaux sociaux – social selling</li>
+          <li>IA : chatgpt, copilot</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h2>Me contacter</h2>
+        <form action="mailto:xav.lagrange@gmail.com?subject=Contact%20depuis%20le%20site%20CV&body=Nom%20:%20%0AEmail%20:%20%0AMessage%20:%20%0A%0A--%20%0AMessage%20envoy%C3%A9%20depuis%20le%20site%20CV%20de%20Xavier%20Lagrange" method="post" enctype="text/plain">
+          <input type="text" placeholder="Votre nom" required>
+          <input type="email" placeholder="Votre email" required>
+          <textarea rows="5" placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Xavier Lagrange | Site personnel
+  </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      const activeSection = document.getElementById(id);
+      activeSection.classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
