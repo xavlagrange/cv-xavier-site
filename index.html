@@ -1,377 +1,90 @@
 <!DOCTYPE html>
-<html lang="fr">
- 
+<html lang='fr'>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>Xavier Lagrange | Executive Education</title>
- 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
- 
+<link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap' rel='stylesheet'>
 <style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: 'Orbitron', sans-serif;
-}
- 
-body {
-background: #0a0d1c;
-color: #e6e6f0;
-line-height: 1.6;
-overflow-x: hidden;
-}
- 
-#stars {
-position: fixed;
-inset: 0;
-z-index: -1;
-background: #000;
-}
- 
-.star {
-position: absolute;
-width: 2px;
-height: 2px;
-background: white;
-border-radius: 50%;
-animation: twinkle 2s infinite ease-in-out;
-}
- 
-@keyframes twinkle {
- 
-0%,
-100% {
-opacity: .3;
-}
- 
-50% {
-opacity: 1;
-}
-}
- 
-header {
-background-image: url("photo-xavier.jpg");
-background-size: cover;
-background-position: center;
-height: 320px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: white;
-}
- 
-header .overlay {
-background: rgba(0, 0, 0, .6);
-padding: 20px 35px;
-border-radius: 12px;
-}
- 
-header h1 {
-font-size: 2rem;
-}
- 
-nav {
-background: #121630;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-padding: 15px;
-box-shadow: 0 0 10px rgba(0, 102, 255, .3);
-}
- 
-nav a {
-color: #66ccff;
-text-decoration: none;
-margin: 0 15px;
-font-weight: 600;
-position: relative;
-}
- 
-nav a:hover {
-color: #00ccff;
-}
- 
-.container {
-max-width: 1100px;
-margin: auto;
-padding: 30px 20px;
-}
- 
-section {
-display: none;
-}
- 
-section.active {
-display: block;
-}
- 
-.card {
-background: #1b1f35;
-border: 1px solid #22357a;
-border-radius: 12px;
-padding: 25px;
-margin-bottom: 25px;
-box-shadow: 0 0 15px rgba(0, 255, 255, .15);
-}
- 
-.card:hover {
-box-shadow: 0 0 20px rgba(0, 255, 255, .30);
-}
- 
-h2 {
-color: #66ccff;
-margin-bottom: 15px;
-}
- 
-ul {
-padding-left: 20px;
-}
- 
-li {
-margin-bottom: 8px;
-}
- 
-a {
-color: #66ccff;
-}
- 
-.email-button {
-display: inline-block;
-margin: 10px;
-padding: 14px 24px;
-text-decoration: none;
-border-radius: 8px;
-font-weight: bold;
-color: white;
-background: linear-gradient(135deg, #1a2a6c, #66ccff);
-transition: .3s;
-}
- 
-.email-button:hover {
-transform: scale(1.05);
-}
- 
-footer {
-text-align: center;
-padding: 30px;
-border-top: 1px solid #22357a;
-color: #66ccff;
-}
- 
-@media(max-width:768px) {
-nav a {
-margin: 8px;
-}
- 
-header h1 {
-font-size: 1.6rem;
-}
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Orbitron', sans-serif; }
+  body { background-color: #0a0d1c; color: #e6e6f0; line-height: 1.6; overflow-x: hidden; }
+  header, nav, section, footer { padding: 1rem; }
+  header { background-image: url('photo-xavier.jpg'); background-size: cover; background-position: center; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; background-color: #121630; box-shadow: 0 0 10px rgba(0,0,255,0.3); }
+  nav a { position: relative; color: #66ccff; text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s; overflow: hidden; }
+  nav a::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 2px; background: #66ccff; transform: scaleX(0); transform-origin: right; transition: transform 0.3s ease-out; }
+  nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+  nav a:hover { color: #00ccff; }
+  .container { max-width: 1000px; margin: auto; padding: 1rem; }
+  section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; display: none; }
+  section.active { display: block; opacity: 1; transform: translateY(0); }
+  .card { background-color: #1b1f35; border-radius: 0.75rem; box-shadow: 0 0 15px rgba(0,255,255,0.2); padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #1a2a6c; transition: transform 0.3s, box-shadow 0.3s; }
+  .card:hover { transform: scale(1.02); box-shadow: 0 0 25px rgba(0,255,255,0.4); }
+  .email-button { display: inline-block; margin: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #1a2a6c, #66ccff); color: white; font-weight: bold; border-radius: 0.5rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 0 10px rgba(0,255,255,0.3); }
+  .email-button:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0,255,255,0.6); background: linear-gradient(135deg, #66ccff, #1a2a6c); }
+  footer { text-align: center; padding: 2rem 1rem; background-color: #0a0d1c; color: #66ccff; margin-top: 2rem; border-top: 1px solid #1a2a6c; font-size: 0.9rem; }
+  @media (max-width: 768px) { nav a { margin: 0.5rem; } }
+  #stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: black; }
+  .star { position: absolute; width: 2px; height: 2px; background: white; border-radius: 50%; animation: twinkle 2s infinite ease-in-out; }
+  @keyframes twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 </style>
 </head>
- 
 <body>
- 
-<div id="stars"></div>
- 
-<header>
-<div class="overlay">
-<h1>Xavier Lagrange</h1>
-<p>Directeur Academy • Executive Education • Business Development</p>
-</div>
-</header>
- 
-<nav>
-#">Accueil</a>
-<a href="#" onclick="show <a href="#" onclick="showTab('formationsclick="showTab('outils
-</nav>
- 
+<div id='stars'></div>
 <main class="container">
- 
-<section id="accueil" class="active">
- 
-<div class="card">
-<h2>À propos</h2>
- 
-<p>
-Directeur Academy et spécialiste de la formation professionnelle,
-du développement B2B et du pilotage d'activités.
-Plus de 20 ans d'expérience dans la conception, le développement
-et la commercialisation d'offres Executive Education.
-</p>
-</div>
- 
-<div class="card">
-<h2>Compétences clés</h2>
- 
-<ul>
-<li>Direction d'activité</li>
-<li>Business Development B2B</li>
-<li>Management d'équipes</li>
-<li>Executive Education</li>
-<li>Transformation digitale</li>
-<li>Gestion de projet</li>
-<li>CRM Salesforce / Hubspot / Dynamics</li>
-<li>Système Qualité (Qualiopi / ISO)</li>
-</ul>
-</div>
- 
-<div class="card">
-<h2>Coordonnées</h2>
- 
-<p>Téléphone : 06 34 05 94 00</p>
-<p>Email : <a href="mailto:xav.lagrange@gmail.com">xav.lagrange@gmail.com</a></p>
-<p>Paris, France</p>
- 
-<p>
-LinkedIn :
-<a href="https://www.linkedin.com/in/lagrangexavier/" target="_blank">
-linkedin.com/in/lagrangexavier
-</a>
-</p>
- 
-<p>
-X :
-<a href="https://x.com/LAGRANGE_Xavier" target="_blank">
-@LAGRANGE_Xavier
-</a>
-</p>
- 
-<p>
-YouTube :
-<a href="https://www.youtube.com/channel/UCTy6u1CMd-d_trtSAN1Lccw" target="_blank">
-Chaîne YouTube
-</a>
-</p>
- 
-</div>
- 
-</section>
- 
-<section id="experiences">
- 
-<div class="card">
-<h2>Clubhouse France (2026 - Aujourd'hui)</h2>
- 
-<ul>
-<li>Directeur des Relations Entreprises et de l'Academy</li>
-<li>Création du Business Plan</li>
-<li>Refonte de l'offre de formation</li>
-<li>Développement commercial B2B</li>
-</ul>
-</div>
- 
-<div class="card">
-<h2>EFREI Paris (2021 - 2026)</h2>
- 
-<ul>
-<li>Responsable Executive Education</li>
-<li>Création de 38 programmes</li>
-<li>Mise en place du SMQ</li>
-<li>Développement de l'activité formation continue</li>
-</ul>
-</div>
- 
-<div class="card">
-<h2>HEC Executive Education (2011 - 2021)</h2>
- 
-<ul>
-<li>Head of Open Enrolment Programs</li>
-<li>Pilotage P&L</li>
-<li>Management d'équipes</li>
-<li>Développement grands comptes</li>
-</ul>
-</div>
- 
-</section>
- 
-<section id="formations">
- 
-<div class="card">
- 
-<h2>Formation Continue</h2>
- 
-<ul>
-<li>RNCP / RS - Centre Inffo</li>
-<li>Manager Entraîneur - HEC</li>
-<li>Coaching Professionnel - HEC</li>
-<li>Influence Transversale - HEC</li>
-<li>Auditeur ISO</li>
-</ul>
- 
-</div>
- 
-</section>
- 
-<section id="outils">
- 
-<div class="card">
- 
-<h2>Outils</h2>
- 
-<ul>
-<li>Microsoft 365</li>
-<li>Salesforce</li>
-<li>Hubspot</li>
-<li>Dynamics CRM</li>
-<li>360Learning</li>
-<li>SAP</li>
-<li>Power BI</li>
-<li>Copilot & ChatGPT</li>
-</ul>
- 
-</div>
- 
-</section>
- 
-<section id="contact">
- 
-<div class="card" style="text-align:center;">
- 
-<h2>Me contacter</h2>
- 
-<a class="email-button"
-href="mailto:xav.lagrange@gmail.com?subject=Prise de contact depuis le site">
-<a class="email-button"
-href="./CV_Xavier_Lagrange.pdf"
-download="CV_Xavier_Lagrange.pdf">
-Télécharger mon CV
-</a>
- 
-</div>
- 
-</section>
- 
-</main>
- 
-<footer>ab(id) {
- 
-document.querySelectorAll('section')
-.forEach(section => section.classList.remove('active'));
- 
-document.getElementById(id)
-.classList.add('active');
-}
- 
-const stars = document.getElementById('stars');
- 
-for (let i = 0; i < 150; i++) {
- 
-const star = document.createElement('div');
- 
-star.className = 'star';
- 
-star.style.top = Math.random() * 100 + '%';
-star.style.left = Math.random() * 100 + '%';
- 
-stars.appendChild(star);
-}
- 
-</script>
- 
-</body>
- 
-</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavier Lagrange | Executive Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0a0d1c;
+      color: #e6e6f0;
+      line-height: 1.6;
+    }
+    header {
+      background-image: url('photo-xavier.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem;
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+    }
+    header div {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 0.8rem;
+      margin: 0.2rem 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #121630;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,255,0.3);
+    }
+    nav a {
